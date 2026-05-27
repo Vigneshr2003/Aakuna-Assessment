@@ -1,5 +1,3 @@
-import React from "react";
-
 import FamilyOwnedIcon from "../../assets/family_owned.png";
 import ProfessionalIcon from "../../assets/professional.png";
 import DedicatedHover from "../../assets/dedicated_hover.png";

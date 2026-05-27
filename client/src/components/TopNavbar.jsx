@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 // Social media icons and logo
 import fbIcon from "../assets/fb.png";

@@ -1,5 +1,3 @@
-import React from "react";
-
 //Navbar and Footer 
 import TopNavbar from "./components/TopNavbar";
 import Footer from "./components/Footer"

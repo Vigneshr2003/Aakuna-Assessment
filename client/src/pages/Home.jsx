@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/home/Header";
 import CarModelSection from "../components/home/CarModelSection";
 import WelcomeSection from "../components/home/WelcomeSection";

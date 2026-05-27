@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from "react";
 import CarModel from "./CarModel";
 
 // Vehicles and Icons
@@ -46,7 +46,7 @@ function CarModelSection() {
             const active = index === 2;
 
             return (
-              <React.Fragment key={index}>
+              <Fragment key={index}>
                 <div className="relative flex flex-col items-center group cursor-pointer">
                   {active && (
                     <img
@@ -96,7 +96,7 @@ function CarModelSection() {
                 {index !== vehicles.length - 1 && (
                   <div className="hidden lg:block h-32 border-r-2 border-dotted border-gray-300 self-center" />
                 )}
-              </React.Fragment>
+              </Fragment>
             );
           })}
         </div>

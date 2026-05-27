@@ -1,5 +1,3 @@
-import React from "react";
-
 // Images
 import EventCarImage from "../../assets/event.png";
 

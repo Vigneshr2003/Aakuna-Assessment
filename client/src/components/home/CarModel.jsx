@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import HeadingLineArrow from "../../assets/heading_line_arw.png";
 
 import Car01 from "../../assets/car_01.png";
@@ -9,6 +9,36 @@ import Car04 from "../../assets/car_04.png";
 import AddIcon from "../../assets/Plus.png";
 import PrevIcon from "../../assets/back.png";
 import NextIcon from "../../assets/next.png";
+
+const CarCard = ({ model, whiteBg = false }) => (
+  <div
+    className={`relative flex min-h-80 flex-col items-center border border-gray-300 px-6 py-8 text-center transition-all duration-300 group hover:shadow-xl hover:-translate-y-1.5 cursor-pointer ${
+      whiteBg ? "bg-white" : "bg-[#f5f5f5]"
+    }`}
+  >
+    <h3 className="mb-5 text-[20px] font-bold text-gray-600 transition-colors group-hover:text-[#6b4ba3]">
+      {model.carModelName}
+    </h3>
+
+    <div className="flex h-45 items-center justify-center overflow-hidden">
+      <img
+        src={model.carImage}
+        alt={model.carModelName}
+        className="max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+
+    <p className="mt-4 text-[18px] font-semibold text-gray-500 transition-colors group-hover:text-gray-800">
+      {model.price}
+    </p>
+
+    <img
+      src={AddIcon}
+      alt="add"
+      className="absolute bottom-0 right-0 h-8 w-8 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"
+    />
+  </div>
+);
 
 function CarModel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,37 +75,6 @@ function CarModel() {
     setCurrentIndex((prev) =>
       prev === 0 ? carModels.length - 1 : prev - 1
     );
-
-  // Reusable Card
-  const CarCard = ({ model, whiteBg = false }) => (
-    <div
-      className={`relative flex min-h-80 flex-col items-center border border-gray-300 px-6 py-8 text-center transition-all duration-300 group hover:shadow-xl hover:-translate-y-1.5 cursor-pointer ${
-        whiteBg ? "bg-white" : "bg-[#f5f5f5]"
-      }`}
-    >
-      <h3 className="mb-5 text-[20px] font-bold text-gray-600 transition-colors group-hover:text-[#6b4ba3]">
-        {model.carModelName}
-      </h3>
-
-      <div className="flex h-45 items-center justify-center overflow-hidden">
-        <img
-          src={model.carImage}
-          alt={model.carModelName}
-          className="max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
-
-      <p className="mt-4 text-[18px] font-semibold text-gray-500 transition-colors group-hover:text-gray-800">
-        {model.price}
-      </p>
-
-      <img
-        src={AddIcon}
-        alt="add"
-        className="absolute bottom-0 right-0 h-8 w-8 transition-all duration-300 group-hover:rotate-90 group-hover:scale-110"
-      />
-    </div>
-  );
 
   return (
     <div className="w-full">

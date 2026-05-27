@@ -1,6 +1,4 @@
-import React from "react";
 import bannerImage from "../../assets/banner.png";
-import logoImage from "../../assets/Logo.png";
 
 function Header() {
   return (

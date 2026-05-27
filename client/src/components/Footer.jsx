@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from "react";
 
 const quickLinks = [
   "Home",
@@ -40,8 +40,8 @@ export default function Footer() {
             "
             aria-label="Quick links"
           >
-            {quickLinks.map((link, i) => (
-              <React.Fragment key={link}>
+            {quickLinks.map((link) => (
+              <Fragment key={link}>
                 <span
                   className="mx-1 text-gray-300 text-lg md:text-2xl font-bold"
                   aria-hidden="true"
@@ -62,7 +62,7 @@ export default function Footer() {
                 >
                   {link}
                 </a>
-              </React.Fragment>
+              </Fragment>
             ))}
           </nav>
         </div>
